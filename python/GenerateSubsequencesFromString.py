@@ -29,3 +29,25 @@ pprint.pprint(getSubsequences(None))
 pprint.pprint(getSubsequences(10))
 pprint.pprint(getSubsequences('')) 
 pprint.pprint(getSubsequences('abcd'))
+        
+
+""" Output
+[[]]
+[[]]
+[[]]
+[['a'],
+ ['a', 'b'],
+ ['b'],
+ ['a', 'c'],
+ ['a', 'b', 'c'],
+ ['b', 'c'],
+ ['c'],
+ ['a', 'd'],
+ ['a', 'b', 'd'],
+ ['b', 'd'],
+ ['a', 'c', 'd'],
+ ['a', 'b', 'c', 'd'],
+ ['b', 'c', 'd'],
+ ['c', 'd'],
+ ['d']]
+"""
