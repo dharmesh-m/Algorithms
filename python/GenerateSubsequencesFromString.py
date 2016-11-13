@@ -15,21 +15,17 @@ def getSubsequences(input_string):
     if len(slist) == 0:
         return [[]]
     
-    clist = [[[slist[0]]]]
+    clist = [[slist[0]]]
     for i in range(1, len(slist)):
-        nlist = list(clist[i-1])
-        n = len(nlist)
+        n = len(clist)
         for j in range(n):
-            l = list(nlist[j])
+            l = list(clist[j])
             l.append(slist[i])
-            nlist.append(l)
-        nlist.append(list(slist[i]))    
-        clist.append(nlist)
-    return clist[len(slist) - 1]
+            clist.append(l)
+        clist.append(list(slist[i]))    
+    return clist
 
 pprint.pprint(getSubsequences(None))
 pprint.pprint(getSubsequences(10))
 pprint.pprint(getSubsequences('')) 
 pprint.pprint(getSubsequences('abcd'))
-        
-
